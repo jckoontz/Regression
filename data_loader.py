@@ -1,6 +1,5 @@
 
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 #1. Load the data                                                                                                          
 def load_csv(filename, delim):
@@ -59,23 +58,3 @@ def load_wine():
     Y -= min(Y)
     return split_dataset(X, Y)
 
-
-
-
-
-
-"""def load_sentiment(): 
-    data_filename = 'datasets/amazon.txt'
-    #load txt? / DataSets = load_txt(data_filename)
-    vectorizer = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
-    Xtrain = DataSets[:, :-1]
-    ytest = DataSets[:, -1]
-    Xtest = DataSets[:, :-1]
-    ytest = DataSets[:, -1]
-    #Vectorize the text data
-    Xtrain = vectorize.transform(Xtrain)
-    ytrain = vectorize.transform(ytrain)
-    Xtest = vectorize.transform(Xtest)
-    ytest = vectorize.transform(ytest)
-    return ((Xtrain, ytrain), (Xtest, ytest))
-"""
